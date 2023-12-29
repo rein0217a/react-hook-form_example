@@ -1,7 +1,7 @@
 body {
   background: #0e101c;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
@@ -30,7 +30,7 @@ p {
 
 p::before {
   display: inline;
-  content: "⚠ ";
+  content: '⚠ ';
 }
 
 input {
@@ -55,8 +55,8 @@ label {
   font-weight: 200;
 }
 
-button[type="submit"],
-input[type="submit"] {
+button[type='submit'],
+input[type='submit'] {
   background: #ec5990;
   color: white;
   text-transform: uppercase;
@@ -68,14 +68,14 @@ input[type="submit"] {
   letter-spacing: 10px;
 }
 
-button[type="submit"]:hover,
-input[type="submit"]:hover {
+button[type='submit']:hover,
+input[type='submit']:hover {
   background: #bf1650;
 }
 
-button[type="submit"]:active,
-input[type="button"]:active,
-input[type="submit"]:active {
+button[type='submit']:active,
+input[type='button']:active,
+input[type='submit']:active {
   transition: 0.3s all;
   transform: translateY(3px);
   border: 1px solid transparent;
@@ -86,13 +86,13 @@ input:disabled {
   opacity: 0.4;
 }
 
-input[type="button"]:hover {
+input[type='button']:hover {
   transition: 0.3s all;
 }
 
-button[type="submit"],
-input[type="button"],
-input[type="submit"] {
+button[type='submit'],
+input[type='button'],
+input[type='submit'] {
   -webkit-appearance: none;
 }
 
@@ -101,7 +101,7 @@ input[type="submit"] {
   margin: 0 auto;
 }
 
-button[type="button"] {
+button[type='button'] {
   display: block;
   appearance: none;
   background: #333;
@@ -129,4 +129,29 @@ button {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 4px;
+}
+
+.input_wrapper{
+  position: relative;
+}
+
+.error-tooltip {
+  background-color: cadetblue;
+  color: white;
+  padding: 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: calc(100% + 7px);
+  border-radius: 5px;
+  margin: 0;
+  display: block;
+}
+.error-tooltip::before{
+  content: '';
+	position: absolute;
+	bottom: -13px;
+	left: 20px;
+	margin-left: -7px;
+	border: 7px solid transparent;
+	border-top: 7px solid cadetblue;
 }

@@ -27,7 +27,8 @@ export const Input = ({
   return (
     <div>
       <label htmlFor={name}>First Name</label>
-      {error && isFocus && <p>focus{error.message as string}</p>}
+      <div className='input_wrapper'>
+      {error && isFocus && <p className='error-tooltip'>focus{error.message as string}</p>}
       <input
         placeholder={placeholder}
         {...register(name, {
@@ -37,6 +38,7 @@ export const Input = ({
         })}
         onFocus={() => setIsFocus(true)} // focus中か制御
       />
+      </div>
       {error && isTouched && !isFocus && (
         <p>not focus{error.message as string}</p>
       )}
